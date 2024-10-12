@@ -12,8 +12,8 @@ function Task({ task, delTask, doneTask }) {
             <div className='w-5 flex items-center'>
                 <img src={task.done ? tick : nottick} alt="" />
             </div>
-            <div className={`overflow-scroll scrollbar-none ${task.dueDate?'w-[80%]':'w-[100%]'} ${task?.done ? 'font-thin text-gray-500' : ''}`}>{task?.task}</div>
-            <div className={`px-3 flex items-center justify-center rounded-md bg-orange-100 ${task.dueDate?'block':'hidden'} w-[20%] overflow-scroll scrollbar-none ${task?.done ? 'line-through font-thin text-gray-500' : ''} text-[10px]`}>
+            <div className={`overflow-scroll scrollbar-none ${task.dueDate?'w-[80%]':'w-[100%]'} ${task?.done ? 'line-through font-thin text-gray-500' : ''}`}>{task?.task}</div>
+            <div className={`px-3 flex items-center justify-center rounded-md bg-orange-100 ${task.dueDate?'block':'hidden'} w-[20%] overflow-scroll scrollbar-none ${task?.done ? 'font-thin text-gray-500' : ''} text-[10px]`}>
                 {task?.dueDate}
             </div>
             <div className='w-8 cursor-pointer flex items-center' onClick={() => delTask(task?.id)}>
