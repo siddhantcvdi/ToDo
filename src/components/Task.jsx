@@ -14,7 +14,7 @@ function Task({task,delTask,doneTask}) {
             <p className={`${task?.done?'line-through font-thin text-gray-500':''}`}>{task?.task}</p>
             <p className={`${task?.done?'line-through font-thin text-gray-500':''}`}>{task?.dueDate}</p>
             </div>
-            <div className='w-4 cursor-pointer' onClick={()=>delTask(task?.id)}><img src={del} alt="" /></div>
+            <div className='w-8 cursor-pointer' onClick={()=>delTask(task?.id)}><img className = 'w-4'src={del} alt="" /></div>
         </div>
     )
 }
