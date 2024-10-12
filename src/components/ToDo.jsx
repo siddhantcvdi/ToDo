@@ -39,7 +39,7 @@ function ToDo() {
         setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));
     }, []);
     return (
-        <div className="w-[400px] h-4/6 bg-white rounded-lg flex flex-col p-6">
+        <div className=" w-full md:w-[400px] h-full bg-white rounded-lg flex flex-col p-6">
             <div className="flex gap-2 mt-2">
                 <img src={icon} alt="" className="w-8" />
                 <p className="w-full text-3xl text-gray-800 font-medium">To-Do List</p>
@@ -61,15 +61,13 @@ function ToDo() {
                     ADD +
                 </div>
             </div>
-            <div className="w-[40%]">
             <DatePicker
                 selected={dueDate}
                 onChange={(date) => setDueDate(date)}
                 dateFormat="MM/dd/yyyy"
                 placeholderText="Due Date"
-                className="h-5 w-full rounded-3xl bg-gray-200 p-5 outline-none mt-3"
+                className="h-5 w-full rounded-3xl bg-gray-200 p-5 outline-none mt-3 text-center text-gray-700"
                 />
-            </div>
             <div className="h-full overflow-y-scroll scrollbar-none">
                 {tasks.map((task) => (
                     <Task
