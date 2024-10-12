@@ -65,7 +65,7 @@ function ToDo() {
                 selected={dueDate}
                 onChange={(date) => setDueDate(date)}
                 dateFormat="MM/dd/yyyy"
-                placeholderText="Due Date"
+                placeholderText="Select Due Date"
                 className="h-5 w-full rounded-3xl bg-gray-200 p-5 outline-none mt-3 text-center text-gray-700"
                 />
             <div className="h-full overflow-y-scroll scrollbar-none">
